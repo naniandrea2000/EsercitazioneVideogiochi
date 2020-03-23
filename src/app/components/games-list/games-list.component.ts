@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GameItem } from 'src/app/models/game-Items.interface';
+import { GameListService } from 'src/app/services/game-list.service';
 
 @Component({
   selector: 'app-games-list',
@@ -8,13 +9,11 @@ import { GameItem } from 'src/app/models/game-Items.interface';
 })
 export class GamesListComponent implements OnInit {
 
-  gamesList: GameItem[] = [
-    {id: 1,nome: "Peggle", descrizione: "colpire il maggior numero di palline lanciando una palla dall'alto dello schermo",genere:"Videogioco rompicapo",rating: 10,prezzo: 5, annoUscita: new Date()},
-    {id: 2,nome: "Fifa 20", descrizione: "Gioco di calcio online e offline",genere:"calcio",rating: 4,prezzo: 55, annoUscita: new Date()},
-    {id: 3,nome: "Rainbow six siege", descrizione: "Gioco strategico multiplayer",genere:"Gioco strategico sparatutto",rating: 9,prezzo: 40, annoUscita: new Date()}
-  ]
+  gamesList: GameItem[];
   
-  constructor() { }
+  constructor(private gameListService: GameListService) { 
+    this.gamesList= this.gameListService.getGameList();
+  }
 
   ngOnInit(): void {
   }
