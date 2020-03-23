@@ -1,6 +1,10 @@
-<ul>
-    <li *ngFor="let gameItem of gamesList">
-        {{gameItem.id}}&nbsp;&nbsp;&nbsp;&nbsp;{{gameItem.nome}}
-        <!--{{gameItem.descrizione}} {{gameItem.genere}} {{gameItem.rating}} {{gameItem.prezzo}} {{gameItem.annoUscita}}-->
-    </li>
-</ul>
+<div class="list-type5">
+    <ol>
+        <li *ngFor="let gameItem of gamesList">
+            <a>
+                {{gameItem.id}}&nbsp;&nbsp;&nbsp;&nbsp;{{gameItem.nome}}
+            <!--{{gameItem.descrizione}} {{gameItem.genere}} {{gameItem.rating}} {{gameItem.prezzo}} {{gameItem.annoUscita}}-->
+            </a>
+        </li>
+    </ol>
+</div>

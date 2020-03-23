@@ -1,6 +1,8 @@
-<ul>
-    <li *ngFor="let menuItem of menuList" [class.active]="menuItem.selected">
-        {{menuItem.description}}
-        <button (click)="selectedComponent(menuItem.id)" class="myButton">></button>
-    </li>
-</ul>
+<div class="list-type5">
+    <ol>
+        <li *ngFor="let menuItem of menuList" [class.active]="menuItem.selected">
+            {{menuItem.description}}
+            <button (click)="selectedComponent(menuItem.id)" class="myButton">></button>
+        </li>
+    </ol>
+</div>
