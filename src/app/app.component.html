@@ -2,7 +2,7 @@
 
 <div [ngSwitch]="componentToShow">
     <app-home *ngSwitchCase="1"></app-home>
-    <app-games-list *ngSwitchCase="2"></app-games-list>
+    <app-games-list (selectGameItem)="dettaglio($event)" *ngSwitchCase="2"></app-games-list>
     <app-edit-game *ngSwitchCase="3"></app-edit-game>
     <app-game-detail *ngSwitchCase="4"></app-game-detail>
 </div>

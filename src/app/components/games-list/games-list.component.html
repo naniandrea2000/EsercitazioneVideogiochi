@@ -5,6 +5,7 @@
                 {{gameItem.id}}&nbsp;&nbsp;&nbsp;&nbsp;{{gameItem.nome}}
             <!--{{gameItem.descrizione}} {{gameItem.genere}} {{gameItem.rating}} {{gameItem.prezzo}} {{gameItem.annoUscita}}-->
             </a>
+            <button (click)="selectedComponent(gameItem.id)">Vai al dettaglio></button>
         </li>
     </ol>
 </div>
