@@ -1,4 +1,4 @@
-<app-menu></app-menu>
+<app-menu (selectMenuItem)="componentToShow = $event"></app-menu>
 
 <div [ngSwitch]="componentToShow">
     <app-home *ngSwitchCase="1"></app-home>
