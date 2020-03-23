@@ -4,5 +4,5 @@
     <app-home *ngSwitchCase="1"></app-home>
     <app-games-list (selectGameItem)="dettaglio($event)" *ngSwitchCase="2"></app-games-list>
     <app-edit-game *ngSwitchCase="3"></app-edit-game>
-    <app-game-detail *ngSwitchCase="4"></app-game-detail>
+    <app-game-detail *ngSwitchCase="4" [gameId]="gameIdForDetail"></app-game-detail>
 </div>

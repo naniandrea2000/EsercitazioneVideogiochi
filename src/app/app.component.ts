@@ -7,9 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   componentToShow: number=1;
-  selezionato: number;
+  gameIdForDetail: number;
 
   dettaglio(id : number){
+    this.gameIdForDetail=id;
     this.componentToShow=4;
   }
 }
