@@ -1,1 +1,16 @@
-<p>games-list works!</p>
+<!--<table>
+    <td>
+        <tr>ID</tr>
+        <tr>NOME</tr>
+        <tr>DESCRIZIONE</tr>
+        <tr>GENERE</tr>
+        <tr>RATING</tr>
+        <tr>PREZZO</tr>
+        <tr>ANNO USCITA</tr>
+    </td>
+</table>-->
+<ul>
+    <li *ngFor="let gameItem of gamesList">
+        {{gameItem.id}} {{gameItem.nome}} {{gameItem.descrizione}} {{gameItem.genere}} {{gameItem.rating}} {{gameItem.prezzo}} {{gameItem.annoUscita}}
+    </li>
+</ul>
