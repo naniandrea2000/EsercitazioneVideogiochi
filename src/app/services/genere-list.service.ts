@@ -12,4 +12,8 @@ export class GenereListService {
   ]
 
   constructor() { }
+
+  getGeneriList(): GenereItem[]{
+    return this.generiListStored;
+  }
 }
