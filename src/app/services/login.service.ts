@@ -19,7 +19,7 @@ export class LoginService {
     let controllo=false;
     this.users.forEach(element => {
       if(element.username==username && element.password==password){
-        controllo=true;
+        element.admin === true ? sessionStorage.setItem('privilege','admin') : sessionStorage.setItem('privilege','user')
       }
     });
     return controllo;
