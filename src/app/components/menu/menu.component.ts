@@ -1,5 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { MenuItem } from 'src/app/models/menu-items.interface';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-menu',
@@ -17,7 +18,7 @@ export class MenuComponent implements OnInit {
     { id: 3, description: 'Modifica gioco', selected: false}
   ]
 
-  constructor() { }
+  constructor(private router : Router) { }
 
   ngOnInit(): void {
   }
@@ -27,5 +28,9 @@ export class MenuComponent implements OnInit {
       menuItem.selected = id === menuItem.id;
     }
     this.selectMenuItem.emit(id);
+  }
+  logout(){
+    sessionStorage.clear();
+    this.router.navigateByUrl("/login");
   }
 }
