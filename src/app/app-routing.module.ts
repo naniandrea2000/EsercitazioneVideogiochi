@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { GamesListComponent } from './components/games-list/games-list.component';
 import { GameDetailComponent } from './components/game-detail/game-detail.component';
-import { GameItemComponent } from './components/game-item/game-item.component';
+//import { GameItemComponent } from './components/game-item/game-item.component';
 import { EditGameComponent } from './components/edit-game/edit-game.component';
 import { LoginComponent } from './components/login/login.component';
 
