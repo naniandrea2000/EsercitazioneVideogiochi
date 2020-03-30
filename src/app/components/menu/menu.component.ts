@@ -23,6 +23,8 @@ export class MenuComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  utente=sessionStorage.getItem('user');
+
   selectedComponent(id : number){
     for(let menuItem of this.menuList){
       menuItem.selected = id === menuItem.id;

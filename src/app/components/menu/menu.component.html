@@ -8,9 +8,10 @@
 </div>-->
 <div class="list-type5">
     <ol>
+        <li>benvenuto {{utente}}</li>
         <li routerLink="/home" routerLinkActive="active">Home</li>
         <li routerLink="/list" routerLinkActive="active">Lista</li>
         <li routerLink="/edit" routerLinkActive="active">Edit</li>
+        <li><button (click)="logout()">Logout</button></li>
     </ol>
 </div>
-<button (click)="logout()">Logout</button>
