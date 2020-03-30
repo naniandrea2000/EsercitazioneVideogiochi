@@ -8,9 +8,9 @@ import { Router } from '@angular/router';
 export class LoginService {
 
   private users: User[] = [
-    {username: "andrea",password:"123"},
-    {username: "davide",password:"123"},
-    {username: "marco",password:"123"}
+    {username: "andrea",password:"123",admin:true},
+    {username: "davide",password:"123",admin:false},
+    {username: "marco",password:"123",admin:false}
   ]
 
   constructor(private router:Router) {}
