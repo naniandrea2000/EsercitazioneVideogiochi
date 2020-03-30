@@ -15,10 +15,6 @@ export class LoginComponent implements OnInit {
   }
 
   login(username: string, password: string) {
-    if (this.listaUtenti.accesso(username,password)) {
-      sessionStorage.setItem('user', username);
-      sessionStorage.setItem('password', password);
-      this.router.navigateByUrl('/home');
-    }
+    this.listaUtenti.eseguiLogin(username,password);
   }
 }

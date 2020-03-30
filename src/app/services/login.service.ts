@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { User } from '../models/user.interface';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -12,17 +13,22 @@ export class LoginService {
     {username: "marco",password:"123"}
   ]
 
-  controllo : boolean;
-
-  constructor() {}
+  constructor(private router:Router) {}
 
   accesso(username: string,password:string): boolean{
-    this.controllo=false;
+    let controllo=false;
     this.users.forEach(element => {
       if(element.username==username && element.password==password){
-        this.controllo=true;
+        controllo=true;
       }
     });
-    return this.controllo;
+    return controllo;
+  }
+
+  eseguiLogin(username: string,password:string){
+    if (this.accesso(username,password)) {
+      sessionStorage.setItem('user', username);
+      this.router.navigateByUrl('/home');
+    }
   }
 }
