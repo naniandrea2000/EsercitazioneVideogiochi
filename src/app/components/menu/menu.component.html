@@ -1,8 +1,15 @@
-<div class="list-type5">
+<!--<div class="list-type5">
     <ol>
         <li *ngFor="let menuItem of menuList" [class.active]="menuItem.selected">
             {{menuItem.description}}
             <button (click)="selectedComponent(menuItem.id)">></button>
         </li>
+    </ol>
+</div>-->
+<div class="list-type5">
+    <ol>
+        <li routerLink="/home" routerLinkActive="active">Home</li>
+        <li routerLink="/list" routerLinkActive="active">Lista</li>
+        <li routerLink="/detail" routerLinkActive="active">Dettaglio</li>
     </ol>
 </div>

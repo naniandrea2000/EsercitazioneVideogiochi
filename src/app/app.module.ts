@@ -9,6 +9,7 @@ import { GameDetailComponent } from './components/game-detail/game-detail.compon
 import { GameItemComponent } from './components/game-item/game-item.component';
 import { EditGameComponent } from './components/edit-game/edit-game.component';
 import { LoginComponent } from './components/login/login.component';
+import { RoutingGame } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { LoginComponent } from './components/login/login.component';
     LoginComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RoutingGame
   ],
   providers: [],
   bootstrap: [AppComponent]
