@@ -14,20 +14,11 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  /*login(username: string, password: string) {
+  login(username: string, password: string) {
     if (this.listaUtenti.accesso(username,password)) {
+      sessionStorage.setItem('user', username);
+      sessionStorage.setItem('password', password);
       this.router.navigateByUrl('/home');
-    }
-  }*/
-  login(username: string, password: string){
-    sessionStorage.setItem('user', username);
-    sessionStorage.setItem('password', password);
- 
-    username=sessionStorage.getItem('user');
-    password=sessionStorage.getItem('password');
- 
-    if(this.listaUtenti.accesso(username,password)){
-      this.router.navigateByUrl("/home");
     }
   }
 }
