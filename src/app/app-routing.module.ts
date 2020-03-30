@@ -11,7 +11,7 @@ const appRoutes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'list', component: GamesListComponent},
   {path: 'edit', component: EditGameComponent},
-  {path: 'detail', component: GameDetailComponent},
+  {path: 'detail/:id', component: GameDetailComponent},
   {path: 'login', component: LoginComponent},
   {path: '', redirectTo: '/home', pathMatch: 'full'}
 ]
