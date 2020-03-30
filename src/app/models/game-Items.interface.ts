@@ -2,7 +2,7 @@ export interface GameItem{
     id : number;
     nome: string;
     descrizione: string;
-    genere: string;
+    genere: number;
     rating: number;
     prezzo: number;
     annoUscita: Date; 
