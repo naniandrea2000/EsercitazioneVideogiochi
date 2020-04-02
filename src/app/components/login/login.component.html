@@ -1,9 +1,25 @@
-<div>
+<!--<div class="form-style-6">
     <label>Username</label>
     <input #username type="text">
-</div>
-<div>
+    <br>
     <label>Password</label>
     <input #password type="password">
 </div>
-<button (click)="login(username.value, password.value)">Login</button>
+<button (click)="login(username.value, password.value)">Login</button>-->
+
+<body>
+    <div class="pagewrap">
+        <form class="form" id="form">
+            <h3 class="form__title">Login</h3>
+            <div class="container">
+                <input class="container__input" type="text" id="username" name="username" value="" required #username>
+                <label id="userLabel" for="username" class="container__label">Username</label>
+            </div>
+            <div class="container">
+                <input class="container__input" type="password" id="pass" name="password" value="" required #password>
+                <label id="passLabel" for="pass" class="container__label">Password</label>
+            </div>
+            <button (click)="login(username.value, password.value)" class=" form__submit " id="submit ">Submit</button>
+        </form>
+    </div>
+</body>
