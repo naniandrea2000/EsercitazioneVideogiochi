@@ -1,16 +1,34 @@
-<app-menu></app-menu>
-<select #genere>
-    <option *ngFor="let genere of listaGeneri" [value]="genere.id">{{genere.descrizione}}</option>
-</select>
-<button (click)="filtra(genere.value)">Filtra</button>
-<div class="list-type5">
-    <ol>
-        <li *ngFor="let gameItem of gamesList">
-            <a>
+<body>
+    <article>
+        <app-menu></app-menu>
+        <div class="select">
+            <select #genere>
+                <option *ngFor="let genere of listaGeneri" [value]="genere.id">{{genere.descrizione}}</option>
+             </select>
+        </div>
+        <div class="bottone">
+            <button (click)="filtra(genere.value)" class="myButton">Filtra</button>
+        </div>
+        <div class="list-type5">
+            <!--<ol>
+                <li *ngFor="let gameItem of gamesList">
+                    <a>
                 {{gameItem.id}}&nbsp;&nbsp;&nbsp;&nbsp;{{gameItem.nome}}
-            <!--{{gameItem.descrizione}} {{gameItem.genere}} {{gameItem.rating}} {{gameItem.prezzo}} {{gameItem.annoUscita}}-->
+            {{gameItem.descrizione}} {{gameItem.genere}} {{gameItem.rating}} {{gameItem.prezzo}} {{gameItem.annoUscita}}
             </a>
-            <button (click)="selectedComponent(gameItem.id)">Vai al dettaglio></button>
-        </li>
-    </ol>
-</div>
+                    <button (click)="selectedComponent(gameItem.id)">Vai al dettaglio></button>
+                </li>
+            </ol>-->
+            <ul class="tilesWrap">
+                <li *ngFor="let gameItem of gamesList">
+                    <h2>{{gameItem.id}}</h2>
+                    <h3>{{gameItem.nome}} </h3>
+                    <p>{{gameItem.descrizione}}<br>genere: {{gameItem.genere}}<br>valutazione: {{gameItem.rating}}
+                        <br> prezzo: {{gameItem.prezzo | currency:"EUR":"symbol"}} <br>data uscita:{{gameItem.annoUscita | date}}
+                    </p>
+                    <button (click)="selectedComponent(gameItem.id)">Vai al dettaglio></button>
+                </li>
+            </ul>
+        </div>
+    </article>
+</body>
