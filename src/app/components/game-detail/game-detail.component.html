@@ -1,3 +1,4 @@
+<app-menu></app-menu>
 <div>
     <ol>
         <li>id: {{game.id}}</li>
@@ -5,7 +6,7 @@
         <li>Descrizione: {{game.descrizione}}</li>
         <li>Genere: {{game.genere}}</li>
         <li>Rating: {{game.rating}}</li>
-        <li>Prezzo: {{game.prezzo}} €</li>
-        <li>Anno uscita: {{game.annoUscita}}</li>
+        <li>Prezzo: {{game.prezzo | currency:"EUR":"symbol" }} </li>
+        <li>Anno uscita: {{game.annoUscita | date}}</li>
     </ol>
 </div>
