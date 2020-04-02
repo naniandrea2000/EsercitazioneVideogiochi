@@ -31,4 +31,8 @@ export class GamesListComponent implements OnInit {
     this.router.navigate(['/detail',id])
   }
 
+  filtra(genere : number){
+    this.gamesList=this.gameListService.getGameGenere(Number(genere));
+  }
+
 }

@@ -23,4 +23,10 @@ export class GameListService {
       return item.id===id;
     });
   }
+
+  getGameGenere(genere: number){
+    return this.gamesListStored.filter(item =>{
+      return item.genere===genere;
+    });
+  }
 }
