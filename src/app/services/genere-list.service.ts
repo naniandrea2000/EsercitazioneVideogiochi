@@ -7,6 +7,7 @@ import { GenereItem } from '../models/genere.interface';
 export class GenereListService {
 
   private generiListStored: GenereItem[] = [
+    {id: 0,descrizione:"ALL"},
     {id: 1,descrizione:"sparatutto"},
     {id: 2,descrizione:"strategia"},
   ]

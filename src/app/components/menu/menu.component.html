@@ -1,12 +1,4 @@
-<!--<div class="list-type5">
-    <ol>
-        <li *ngFor="let menuItem of menuList" [class.active]="menuItem.selected">
-            {{menuItem.description}}
-            <button (click)="selectedComponent(menuItem.id)">></button>
-        </li>
-    </ol>
-</div>-->
-<header>
+<!--<header>
     <nav>
         <ul class="nav_links">
             <li class="benvenuto">benvenuto {{utente}}</li>
@@ -16,4 +8,14 @@
             <li><button (click)="logout()" class="myButton">Logout</button></li>
         </ul>
     </nav>
-</header>
+</header>-->
+
+<body>
+    <ul>
+        <li class="benvenuto">benvenuto {{utente}}</li>
+        <li routerLink="/home" routerLinkActive="active">Home</li>
+        <li routerLink="/list" routerLinkActive="active">Lista</li>
+        <li *ngIf="admin()" routerLink="/edit" routerLinkActive="active">Edit</li>
+        <li (click)="logout()">Logout</li>
+    </ul>
+</body>
