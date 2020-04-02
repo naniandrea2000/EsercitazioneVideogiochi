@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css?family=Signika');
+$light: #fff;
+$dark: #21213d;
+$col1: #1cc7d0;
+$col2: #2ede98;
+$col3: #3369e7;
+$time: 500ms;
+$cubic: cubic-bezier(0.06,
+0.63,
+0.91,
+0.66);
+$aside: 25vw;
+$size: 0.25em;
+body {
+    margin: 0;
+    padding: 0;
+    height: 99vh;
+    overflow: hidden;
+    display: flex;
+    line-height: 1.5;
+    font-family: 'Signika', cursive;
+    font-weight: 300;
+    background-color: $dark;
+    color: $light;
+}
+
+article {
+    //padding: ($size * 10) ($size * 4) $size;
+    transition: all $time / 2 $cubic;
+}
+
+article {
+    //position: relative;
+    //transform-origin: 10% 50%; // change for position
+    width: 100%;
+    background-image: linear-gradient( 45deg, $col1, $col2);
+    .wrapper {
+        margin: auto;
+        padding: 1px;
+        max-width: 90%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        h1 {
+            margin: 0;
+        }
+        .footer {
+            text-align: right;
+        }
+    }
+}

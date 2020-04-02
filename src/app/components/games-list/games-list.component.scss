@@ -22,7 +22,6 @@ body {
     font-weight: 300;
     background-color: $dark;
     color: $light;
-    font-family: 'helvetica', san-serif;
 }
 
 article {
@@ -68,7 +67,7 @@ article {
     position: relative;
     vertical-align: top;
     margin: 10px;
-    font-family: 'helvetica', san-serif;
+    font-family: 'Signika', cursive;
     min-height: 25vh;
     background: #262a2b;
     border: 1px solid #252727;
@@ -200,6 +199,8 @@ select {
     cursor: pointer;
     border: 1px solid black;
     border-radius: 3px;
+    font-family: 'Signika', cursive;
+    font-size: 15px;
 }
 
 .select {
@@ -212,10 +213,13 @@ select {
     border-radius: .25em;
     padding-bottom: 10px;
     padding-left: 100px;
+    font-family: 'Signika', cursive;
+    font-size: 15px;
 }
 
 .bottone {
     padding-left: 100px;
+    font-family: 'Signika', cursive;
 }
 
 .myButton {
@@ -224,7 +228,7 @@ select {
     display: inline-block;
     cursor: pointer;
     color: #b7b7b7;
-    font-family: Arial;
+    font-family: 'Signika', cursive;
     font-size: 15px;
     font-weight: bold;
     padding: 8px 7px;
