@@ -34,10 +34,7 @@ export class LoginService {
   }
 
   add(user){
-    let temp: User;
-    temp.username=user.username;
-    temp.password=user.password;
-    temp.admin=false;
-    this.users.push(temp);
+    user.admin=false;
+    this.users.push(user);
   }
 }

@@ -1,15 +1,16 @@
 <body>
-    <div>
-        <form [formGroup]="signForm" (ngSubmit)="onSubmit(signForm.value)">
-            <div>
-                <label for="username">Username:</label>
-                <input type="text" id="username" formControlName="username">
+    <div class="pagewrap">
+        <form [formGroup]="signForm" (ngSubmit)="onSubmit(signForm.value)" class="form">
+            <h3 class="form__title">Registrati</h3>
+            <div class="container">
+                <input type="text" id="username" formControlName="username" class="container__input">
+                <label for="username" class="container__label">Username:</label>
             </div>
-            <div>
-                <label for="password">Password:</label>
-                <input type="text" id="password" formControlName="password">
+            <div class="container">
+                <input class="container__input" type="password" id="password" formControlName="password">
+                <label for="password" class="container__label">Password:</label>
             </div>
-            <button type="submit">Sign In</button>
+            <button type="submit" class=" form__submit ">Sign In</button>
         </form>
     </div>
 </body>
