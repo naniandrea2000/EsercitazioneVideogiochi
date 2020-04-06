@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RatingStarComponent implements OnInit {
 
+  stars: number[] = [1, 2, 3, 4, 5];
+  selectedValue:number;
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  countStar(star) {
+    this.selectedValue = star;
+    console.log('Value of star', star);
+  }
 }
