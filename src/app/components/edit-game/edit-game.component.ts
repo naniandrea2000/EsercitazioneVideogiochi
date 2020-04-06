@@ -12,13 +12,16 @@ import { FormGroup, FormBuilder,FormArray,Validators, FormControl } from '@angul
 })
 export class EditGameComponent implements OnInit {
 
+  attivato:boolean;
+  gameList:GameItem[];
   game: GameItem;
   gameForm: FormGroup
   
   constructor(private gameListService: GameListService,private fb: FormBuilder) { 
+    this.gameList=gameListService.getGameList();
     this.gameForm = this.fb.group({
-      id: '',
-      name: '',
+      id:'',
+      nome: '',
       descrizione:'',
       genere:'',
       rating:'',
@@ -28,10 +31,35 @@ export class EditGameComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.attivato=false;
   }
 
   form(id : number){
     this.game=this.gameListService.getGameItem(id);
-    
+    console.log(this.gameListService.getGameItem(id));
+    this.modifica(this.game);
+    this.attivato=true;
+  }
+  
+  idpassato(){
+    if(this.attivato===true)return true;
+    else return false;
+  }
+
+  modifica(gioco:GameItem){
+    this.gameForm = this.fb.group({
+      id: gioco.id,
+      nome: gioco.nome,
+      descrizione: gioco.descrizione,
+      genere: gioco.genere,
+      rating: gioco.rating,
+      prezzo: gioco.prezzo,
+      annoUscita: gioco.annoUscita,
+    });
+  }
+  onSubmit(form){
+    this.gameListService.modifica(form);
+    this.gameList=this.gameListService.getGameList();
+    this.attivato=false;
   }
 }

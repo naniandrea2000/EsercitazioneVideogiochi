@@ -11,6 +11,7 @@ import { EditGameComponent } from './components/edit-game/edit-game.component';
 import { LoginComponent } from './components/login/login.component';
 import { RoutingGame } from './app-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SignInComponent } from './components/sign-in/sign-in.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     GameDetailComponent,
     GameItemComponent,
     EditGameComponent,
-    LoginComponent
+    LoginComponent,
+    SignInComponent
   ],
   imports: [
     BrowserModule,

@@ -3,21 +3,21 @@
         <app-menu></app-menu>
         <div class="wrapper">
             <div class="content">
-                <h1>Inserisci l'Id del gioco che vuoi modificare</h1>
+                <!--<h1>Inserisci l'Id del gioco che vuoi modificare</h1>
                 <label for="Id">Id:</label><br>
                 <input type="text" id="Id" name="Id" #id>
-                <button (click)="form(id.value)" type="submit">Invia</button>
+                <button (click)="form(id.value)" type="submit">Invia</button>-->
+                <select #id>
+                    <option *ngFor="let listItem of gameList" [value]="listItem.id" >{{listItem.nome}}</option>
+                </select>
+                <button (click)="form(id.value)">invia</button>
             </div>
             <br><br>
             <div class="wrapper">
-                <form [formGroup]="gameForm">
-                    <div>
-                        <label for="id">id</label>
-                        <input type="text" id="id" formControlName="id">
-                    </div>
+                <form [formGroup]="gameForm" *ngIf="idpassato()" (ngSubmit)="onSubmit(gameForm.value)">
                     <div>
                         <label for="name">Name</label>
-                        <input type="text" id="name" formControlName="name">
+                        <input type="text" id="name" formControlName="nome">
                     </div>
                     <div>
                         <label for="descrizione">descrizione</label>
