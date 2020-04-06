@@ -32,4 +32,12 @@ export class LoginService {
       this.router.navigateByUrl('/home');
     }
   }
+
+  add(user){
+    let temp: User;
+    temp.username=user.username;
+    temp.password=user.password;
+    temp.admin=false;
+    this.users.push(temp);
+  }
 }
