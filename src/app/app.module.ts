@@ -10,6 +10,8 @@ import { GameItemComponent } from './components/game-item/game-item.component';
 import { EditGameComponent } from './components/edit-game/edit-game.component';
 import { LoginComponent } from './components/login/login.component';
 import { RoutingGame } from './app-routing.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { RoutingGame } from './app-routing.module';
   ],
   imports: [
     BrowserModule,
-    RoutingGame
+    RoutingGame,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

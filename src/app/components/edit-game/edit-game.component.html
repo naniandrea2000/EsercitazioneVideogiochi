@@ -1,18 +1,47 @@
-<html>
-
 <body>
     <article>
         <app-menu></app-menu>
         <div class="wrapper">
             <div class="content">
                 <h1>Inserisci l'Id del gioco che vuoi modificare</h1>
-                <form>
-                    <label for="Id">Id:</label><br>
-                    <input type="text" id="Id" name="Id"><br>
+                <label for="Id">Id:</label><br>
+                <input type="text" id="Id" name="Id" #id>
+                <button (click)="form(id.value)" type="submit">Invia</button>
+            </div>
+            <br><br>
+            <div class="wrapper">
+                <form [formGroup]="gameForm">
+                    <div>
+                        <label for="id">id</label>
+                        <input type="text" id="id" formControlName="id">
+                    </div>
+                    <div>
+                        <label for="name">Name</label>
+                        <input type="text" id="name" formControlName="name">
+                    </div>
+                    <div>
+                        <label for="descrizione">descrizione</label>
+                        <input type="text" id="descrizione" formControlName="descrizione">
+                    </div>
+                    <div>
+                        <label for="genere">genere</label>
+                        <input type="text" id="genere" formControlName="genere">
+                    </div>
+                    <div>
+                        <label for="rating">rating</label>
+                        <input type="text" id="rating" formControlName="rating">
+                    </div>
+                    <div>
+                        <label for="prezzo">prezzo</label>
+                        <input type="text" id="prezzo" formControlName="prezzo">
+                    </div>
+                    <div>
+                        <label for="annoUscita">anno Uscita</label>
+                        <input type="text" id="annoUscita" formControlName="annoUscita">
+                    </div>
+                    <button type="submit">Submit</button>
                 </form>
             </div>
         </div>
     </article>
 </body>
-
-</html>
