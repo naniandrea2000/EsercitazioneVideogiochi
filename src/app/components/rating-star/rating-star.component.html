@@ -1,9 +1,10 @@
-<div class="row">
+<!--<div class="row">
     <div class="col-sm-12">
-        <ul class="list-inline rating-list" *ngFor="let star of stars" style="display: inline-block">
-            <li (click)="countStar(star)" [ngClass]="{'selected': (star <= selectedValue)}">
+        <ul class="list-inline rating-list" *ngFor="let item of [1,2,3,4,5]" style="display: inline-block">
+            <li (click)="selectRate(item)" [ngClass]="{'selected': (item <= selectedValue)}">
                 <i class="fa fa-star" aria-hidden="true">&#9733;</i>
             </li>
         </ul>
     </div>
-</div>
+</div>-->
+<span *ngFor="let item of [1,2,3,4,5]" (click)="selectRate(item)" [ngClass]="{selected: item <=value, 'no-selected': item>value}">&#9733;</span>

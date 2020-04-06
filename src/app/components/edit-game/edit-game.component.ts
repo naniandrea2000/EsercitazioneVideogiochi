@@ -41,11 +41,6 @@ export class EditGameComponent implements OnInit {
     this.attivato=true;
   }
   
-  idpassato(){
-    if(this.attivato===true)return true;
-    else return false;
-  }
-
   modifica(gioco:GameItem){
     this.gameForm = this.fb.group({
       id: gioco.id,

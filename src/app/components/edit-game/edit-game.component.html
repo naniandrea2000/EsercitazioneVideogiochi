@@ -27,11 +27,15 @@
                         <label for="genere">genere</label>
                         <input type="text" id="genere" formControlName="genere">
                     </div>
-                    <div>
+                    <!--<div>
                         <label for="rating">rating</label>
                         <input type="text" id="rating" formControlName="rating">
+                    </div>-->
+                    <div>
+                        <label for="rating">rating</label>
+                        <app-rating-star formControlName="rating"></app-rating-star>
                     </div>
-                    <app-rating-star></app-rating-star>
+
                     <div>
                         <label for="prezzo">prezzo</label>
                         <input type="text" id="prezzo" formControlName="prezzo">

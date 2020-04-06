@@ -1,4 +1,4 @@
-.rating-list li {
+/*.rating-list li {
     float: right;
     color: #ddd;
     padding: 10px 5px;
@@ -17,4 +17,16 @@
 .rating-list {
     display: inline-block;
     list-style: none;
+}*/
+
+.selected {
+    color: red;
+}
+
+.no-selected {
+    color: gray;
+}
+
+span {
+    cursor: pointer;
 }

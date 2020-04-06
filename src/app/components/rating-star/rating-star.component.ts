@@ -1,22 +1,42 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, forwardRef } from '@angular/core';
+import { NG_VALUE_ACCESSOR, ControlValueAccessor } from '@angular/forms';
 
 @Component({
   selector: 'app-rating-star',
   templateUrl: './rating-star.component.html',
-  styleUrls: ['./rating-star.component.scss']
+  styleUrls: ['./rating-star.component.scss'],
+  providers: [{
+    provide: NG_VALUE_ACCESSOR,
+    useExisting: forwardRef(() => RatingStarComponent),
+    multi: true
+  }]
 })
-export class RatingStarComponent implements OnInit {
+export class RatingStarComponent implements OnInit,ControlValueAccessor {
 
-  stars: number[] = [1, 2, 3, 4, 5];
-  selectedValue:number;
+  onChange: any = ()=>{};
+  onTouch: any = ()=>{};
+
+  value: number;
 
   constructor() { }
 
-  ngOnInit(): void {
+  writeValue(obj: number): void {
+    this.value=obj;
   }
 
-  countStar(star) {
-    this.selectedValue = star;
-    console.log('Value of star', star);
+  registerOnChange(fn: any): void {
+    this.onChange = fn;
+  }
+  registerOnTouched(fn: any): void {
+    this.onTouch = fn;
+  }
+
+  selectRate(item: number){
+    this.value = item;
+    this.onTouch(item);
+    this.onChange(item);
+  }
+
+  ngOnInit(): void {
   }
 }
