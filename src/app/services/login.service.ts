@@ -36,5 +36,6 @@ export class LoginService {
   add(user){
     user.admin=false;
     this.users.push(user);
+    console.log(this.users);
   }
 }

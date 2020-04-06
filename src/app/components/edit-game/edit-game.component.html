@@ -14,7 +14,7 @@
             </div>
             <br><br>
             <div class="wrapper">
-                <form [formGroup]="gameForm" *ngIf="idpassato()" (ngSubmit)="onSubmit(gameForm.value)">
+                <form [formGroup]="gameForm" *ngIf="attivato" (ngSubmit)="onSubmit(gameForm.value)">
                     <div>
                         <label for="name">Name</label>
                         <input type="text" id="name" formControlName="nome">

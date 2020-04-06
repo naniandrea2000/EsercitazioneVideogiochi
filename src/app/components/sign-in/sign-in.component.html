@@ -3,12 +3,12 @@
         <form [formGroup]="signForm" (ngSubmit)="onSubmit(signForm.value)" class="form">
             <h3 class="form__title">Registrati</h3>
             <div class="container">
-                <input type="text" id="username" formControlName="username" class="container__input">
-                <label for="username" class="container__label">Username:</label>
+                <input type="text" id="username" formControlName="username" class="container__input" required>
+                <label for="username" class="container__label">Username</label>
             </div>
             <div class="container">
-                <input class="container__input" type="password" id="password" formControlName="password">
-                <label for="password" class="container__label">Password:</label>
+                <input class="container__input" type="password" id="password" formControlName="password" required>
+                <label for="password" class="container__label">Password</label>
             </div>
             <button type="submit" class=" form__submit ">Sign In</button>
         </form>
