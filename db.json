@@ -1,6 +1,8 @@
 {
     "games": [
-        { "id": 1, "title": "json-server", "author": "typicode" }
+        { "id": 1, "nome": "Peggle", "descrizione": "colpire il maggior numero di palline lanciando una palla dall'alto dello schermo", "genere": 2, "rating": 1, "prezzo": 5, "annoUscita": "2016" },
+        { "id": 2, "nome": "Fifa 20", "descrizione": "Gioco di calcio online e offline", "genere": 2, "rating": 1, "prezzo": 55, "annoUscita": "2017" },
+        { "id": 3, "nome": "Rainbow six siege", "descrizione": "Gioco strategico multiplayer", "genere": 1, "rating": 1, "prezzo": 40, "annoUscita": "2018" }
     ],
     "comments": [
         { "id": 1, "body": "some comment", "postId": 1 }
