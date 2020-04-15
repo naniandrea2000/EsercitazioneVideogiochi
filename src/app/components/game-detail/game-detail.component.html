@@ -1,5 +1,4 @@
-<app-menu></app-menu>
-<div>
+<!--<div>
     <ol>
         <li>id: {{game.id}}</li>
         <li>Nome: {{game.nome}}</li>
@@ -9,4 +8,56 @@
         <li>Prezzo: {{game.prezzo | currency:"EUR":"symbol" }} </li>
         <li>Anno uscita: {{game.annoUscita | date}}</li>
     </ol>
-</div>
+</div>-->
+<html>
+
+<body>
+    <app-menu></app-menu>
+    <main>
+        <div class="card">
+            <div class="card__title">
+                <div class="icon">
+                    <a href="#"><i class="fa fa-arrow-left"></i></a>
+                </div>
+                <h3>Videogioco</h3>
+            </div>
+            <div class="card__body">
+                <div class="half">
+                    <div class="featured_text">
+                        <h1>{{game.nome}}</h1>
+                        <p class="sub">{{game.genere}}</p>
+                        <p class="price">{{game.prezzo | currency:"EUR":"symbol" }}</p>
+                    </div>
+                    <div class="image">
+                        <img src="https://www.ilpost.it/wp-content/uploads/2018/12/streaming-videogiochi.jpg" alt="">
+                    </div>
+                </div>
+                <div class="half">
+                    <div class="description">
+                        <p>{{game.descrizione}}</p>
+                    </div>
+                    <span class="stock"><i class="fa fa-pen"></i> Rating</span>
+                    <div class="reviews">
+                        <ul class="stars">
+                            <li>{{game.rating}}</li>
+                        </ul>
+                    </div>
+                    <span class="stock"><i class="fa fa-pen"></i> Anno uscita</span>
+                    <div class="reviews">
+                        <ul class="stars">
+                            <li>{{game.annoUscita | date}}</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+            <div class="card__footer">
+                <div class="action">
+                    <button routerLink="/list" type="button">Torna alla lista</button>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

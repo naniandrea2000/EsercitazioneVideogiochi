@@ -13,6 +13,7 @@ import { RoutingGame } from './app-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SignInComponent } from './components/sign-in/sign-in.component';
 import { RatingStarComponent } from './components/rating-star/rating-star.component';
+import { ProvaComponent } from './components/prova/prova.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { RatingStarComponent } from './components/rating-star/rating-star.compon
     EditGameComponent,
     LoginComponent,
     SignInComponent,
-    RatingStarComponent
+    RatingStarComponent,
+    ProvaComponent
   ],
   imports: [
     BrowserModule,
